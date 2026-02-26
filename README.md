@@ -1,5 +1,9 @@
 # Orchestrator-lite
 
+<img width="1753" height="889" alt="Screenshot 2026-02-26 at 2 43 24 PM" src="https://github.com/user-attachments/assets/81b951ee-bbea-4706-ba17-f938fbb1f4cd" />
+<img width="1753" height="889" alt="Screenshot 2026-02-26 at 2 43 24 PM" src="https://github.com/user-attachments/assets/1cad36a1-77f8-4663-837e-9beda0a2a6bb" />
+
+
 **Distributed Workflow Engine | Kafka-Native | Real-Time UI**
 
 A high-performance demonstration of the Orchestrator-Worker pattern. This project showcases how to handle long-running distributed tasks with zero-loss reliability.
@@ -48,3 +52,6 @@ On workflow app: npm run preview -- --port 5001
 On monitor app: npm run preview -- --port 5002
 
 Run npm run dev on Shell app.
+
+# Backend
+
