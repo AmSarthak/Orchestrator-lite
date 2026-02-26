@@ -1,7 +1,8 @@
 # Orchestrator-lite
 
 <img width="1753" height="889" alt="Screenshot 2026-02-26 at 2 43 24 PM" src="https://github.com/user-attachments/assets/81b951ee-bbea-4706-ba17-f938fbb1f4cd" />
-<img width="1753" height="889" alt="Screenshot 2026-02-26 at 2 43 24 PM" src="https://github.com/user-attachments/assets/1cad36a1-77f8-4663-837e-9beda0a2a6bb" />
+<img width="1753" height="889" alt="Screenshot 2026-02-26 at 2 43 24 PM" src="https://github.com/user-attachments/assets/f0efef97-342c-49fa-9063-10439bf09437" />
+
 
 
 **Distributed Workflow Engine | Kafka-Native | Real-Time UI**
