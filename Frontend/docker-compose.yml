@@ -1,0 +1,28 @@
+services:
+  mfe-builder:
+    build: ./workflow-app
+    ports:
+      - "5001:80"
+    networks:
+      - mfe-network
+
+  mfe-monitor:
+    build: ./monitor-app
+    ports:
+      - "5002:80"
+    networks:
+      - mfe-network
+
+  shell-app:
+    build: ./SHELL
+    ports:
+      - "5005:80"
+    depends_on:
+      - mfe-builder
+      - mfe-monitor
+    networks:
+      - mfe-network
+
+networks:
+  mfe-network:
+    driver: bridge

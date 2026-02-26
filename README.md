@@ -25,7 +25,7 @@ A high-performance demonstration of the Orchestrator-Worker pattern. This projec
 
 The UI is designed as a standalone, federated module that can be embedded into any host platform.
 
-Reactive Telemetry: Utilizes a persistent WebSocket connection to "live-tail" the Kafka event stream.
+Reactive Telemetry: Utilizes a persistent WebSocket connection to "live-tail" the event stream.
 
 Optimistic UI: Provides immediate feedback on workflow triggers while awaiting asynchronous confirmation from the backend.
 
@@ -45,13 +45,9 @@ The WebSocket Bridge: A specialized gateway service acts as a Kafka Consumer, tr
 
 # Frontend
 
-npm run build on both workflow-app and monitor-app
+Download Docker Desktop
 
-On workflow app: npm run preview -- --port 5001
-
-On monitor app: npm run preview -- --port 5002
-
-Run npm run dev on Shell app.
+In Frontend folder , run docker-compose up --build
 
 # Backend
 
