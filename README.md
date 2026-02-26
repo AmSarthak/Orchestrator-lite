@@ -1,9 +1,11 @@
 # Orchestrator-lite
 
-<img width="1753" height="889" alt="Screenshot 2026-02-26 at 2 43 24 PM" src="https://github.com/user-attachments/assets/81b951ee-bbea-4706-ba17-f938fbb1f4cd" />
+<img width="1879" height="927" alt="Screenshot 2026-02-26 at 2 40 55 PM" src="https://github.com/user-attachments/assets/b781e18b-0278-46bf-a8d5-2ded85f5a012" />
 
 
-<img width="1920" height="1080" alt="Screenshot 2026-02-26 at 2 40 45 PM (2)" src="https://github.com/user-attachments/assets/adc94223-0d00-4c49-8447-a42718127062" />
+<img width="1214" height="735" alt="Screenshot 2026-02-26 at 5 53 17 PM" src="https://github.com/user-attachments/assets/c53eab2d-25c3-4191-af6f-11cb29f64c18" />
+
+
 
 
 
@@ -46,6 +48,9 @@ The system follows a control-plane / data-plane separation:
 
 **Kafka** – Provides durable, asynchronous communication between services.
 
+# Architecture
+
+<img width="416" height="232" alt="Screenshot 2026-02-26 at 6 00 28 PM" src="https://github.com/user-attachments/assets/be7187fb-5efe-4c73-aecf-19db08f59cad" />
 
 
 ### 🚦 Quick Start
@@ -65,4 +70,6 @@ In folder task-orchestrator-service npm run dev
 # Kafka
 
 Run kafka container on Docker named kafka-local. Change broker name as required in kafkaClient.ts
+
+
 
