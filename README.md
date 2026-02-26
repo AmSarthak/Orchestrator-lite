@@ -1,7 +1,9 @@
 # Orchestrator-lite
 
 <img width="1753" height="889" alt="Screenshot 2026-02-26 at 2 43 24 PM" src="https://github.com/user-attachments/assets/81b951ee-bbea-4706-ba17-f938fbb1f4cd" />
-<img width="1753" height="889" alt="Screenshot 2026-02-26 at 2 43 24 PM" src="https://github.com/user-attachments/assets/f0efef97-342c-49fa-9063-10439bf09437" />
+
+
+<img width="1920" height="1080" alt="Screenshot 2026-02-26 at 2 40 45 PM (2)" src="https://github.com/user-attachments/assets/adc94223-0d00-4c49-8447-a42718127062" />
 
 
 
