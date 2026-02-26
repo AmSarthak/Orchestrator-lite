@@ -62,7 +62,7 @@ In folder task-executor-service npm run dev
 
 In folder task-orchestrator-service npm run dev
 
-# KAFKA
+# Kafka
 
 Run kafka container on Docker named kafka-local. Change broker name as required in kafkaClient.ts
 
