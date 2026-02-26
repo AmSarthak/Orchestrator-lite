@@ -38,11 +38,13 @@ State Projection: Instead of polling a database, the MFE builds its local state 
 
 **2. The Messaging & Backend Layer (Kafka)**
 
-Kafka acts as the central nervous system, ensuring that state transitions are durable and traceable.
+The system follows a control-plane / data-plane separation:
 
-Workflow Log: Every step, retry, and failure is recorded as an immutable event in the workflow-events topic.
+**Task Executor (Control Plane)** – Manages workflow state, retry logic, and WebSocket updates.
 
-The WebSocket Bridge: A specialized gateway service acts as a Kafka Consumer, translating internal binary streams into JSON payloads for the Microfrontend.
+**Task Runner (Data Plane)**– Executes individual tasks and publishes results.
+
+**Kafka** – Provides durable, asynchronous communication between services.
 
 
 
