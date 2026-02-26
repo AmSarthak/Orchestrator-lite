@@ -21,8 +21,10 @@ function MonitorComponent() {
           const socket = new WebSocket("ws://localhost:3002");
           socket.onmessage = (event) => {
             const data = JSON.parse(event.data);
-            setEventList(prevList => [...prevList, data]);
-            setIsLoading(false);
+            if(data.hasOwnProperty('type')){
+              setEventList(prevList => [...prevList, data]);
+              setIsLoading(false);
+            }
           };
         }
       }
@@ -40,8 +42,11 @@ function MonitorComponent() {
     //     const socket = new WebSocket("ws://localhost:3002");
     //     socket.onmessage = (event) => {
     //     const data = JSON.parse(event.data);
-    //     setEventList(prevList => [...prevList, data]);
-    //     setIsLoading(false);
+    //     if(data.hasOwnProperty('type')){
+    //       setEventList(prevList => [...prevList, data]);
+    //       setIsLoading(false);
+    //     }
+        
     //     };
     //     return () => {
     //     socket.close();
@@ -55,11 +60,12 @@ function MonitorComponent() {
         <div className="scroll-area">
           {loading && <div className="loader-wrap"><img height={60} width={60} src={loader} alt="loading" /></div>}
           {!loading && eventList.map((event, idx) => (
-            <div key={idx} className={`card event-card ${event.type.toLowerCase().includes('fail') ? 'error' : ''}`}>
-              <h4>{event.type.toUpperCase()}</h4>
-              {event.title?.name && <p>Name: {event.title?.name.toUpperCase()}</p>}
-              <span className="timestamp">{event.startTime}</span>
-              {event.endTime && <span className='timestamp'>Ended at: {event.endTime}</span>}
+            <div key={idx} className={`card event-card ${(event.type?.toLowerCase().includes('fail') || event.type?.toLowerCase().includes('limit') ) ? 'error' : ''}`}>
+              <h4>{event.type?.toUpperCase()}</h4>
+              <h4>{event.status?.toUpperCase()}</h4>
+              {event.taskId && <p className="timestamp">PID: {event.taskId}</p>}
+              {event.title && <p>Process: {event.title?.toUpperCase()}</p>}
+              {event.time && <p className="timestamp">Time: {event.time}</p>}
             </div>
           ))}
         </div>
