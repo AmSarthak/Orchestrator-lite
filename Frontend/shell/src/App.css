@@ -1,42 +1,32 @@
-#root {
-  max-width: 1280px;
+/* Ensure the grid container acts as a row */
+.workflow-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Prevents stretching */
+  gap: 40px;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+}
+body{
+  min-width: 100% !important;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Left Column: The Builder */
+.workflow-mfe {
+  flex: 0 0 350px; /* Do not grow, do not shrink, stay 350px */
+  position: sticky;
+  top: 40px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Right Column: The Monitor */
+.monitor-mfe {
+  flex: 1; /* Take up all remaining horizontal space */
+  min-width: 0; /* Critical for preventing MFE content from breaking the flexbox */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* Ensure the sub-apps fill their containers */
+.workflow-mfe > div, 
+.monitor-mfe .scroll-area > div {
+  width: 100%;
 }

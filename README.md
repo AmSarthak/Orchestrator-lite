@@ -38,3 +38,13 @@ The WebSocket Bridge: A specialized gateway service acts as a Kafka Consumer, tr
 
 
 ### 🚦 Quick Start
+
+# Frontend
+
+npm run build on both workflow-app and monitor-app
+
+On workflow app: npm run preview -- --port 5001
+
+On monitor app: npm run preview -- --port 5002
+
+Run npm run dev on Shell app.

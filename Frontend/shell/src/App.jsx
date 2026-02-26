@@ -6,12 +6,25 @@ const MonitorApp = React.lazy(() => import("monitor/MonitorApp"));
 function App() {
   return (
     <div style={{ padding: 40 }}>
-      <Suspense fallback={<div>Loading Builder...</div>}>
-        <BuilderApp />
-      </Suspense>
-      <Suspense fallback={<div>Loading Monitor...</div>}>
-        <MonitorApp />
-      </Suspense>
+      <div className="workflow-shell">
+         <main className="workflow-grid">
+              {/* Left Column: Builder */}
+              <section className="workflow-mfe">
+                <Suspense>
+                  <BuilderApp />
+                </Suspense>
+              </section>
+      
+              {/* Right Column: Monitor */}
+              <section className="monitor-mfe">
+                <div className="scroll-area">
+                  <Suspense>
+                    <MonitorApp />
+                  </Suspense>
+                </div>
+              </section>
+            </main>
+          </div>
     </div>
   );
 }

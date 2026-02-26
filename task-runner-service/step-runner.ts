@@ -95,17 +95,18 @@ export async function executeWorkflow(steps: Step[]) {
                     startTime: new Date().toLocaleTimeString()
                 });
                 if (attempt == maxRetries) {
-                    // return {
-                    //     status: "Failed",
-                    //     failedStep: step.name,
-                    //     events
-                    // };
                      broadcast({
-                        type: "Workflow Failed",
+                        type: "Retry failed",
                         title: step,
                         attempt: attempt + 1,
                         startTime: new Date().toLocaleTimeString()
                     });
+                    successFlag = false;
+                     broadcast({
+                        type: "Workflow Failed",
+                        endTime: new Date().toLocaleTimeString()
+                    });
+                    return;
                 }
             }
             attempt++;
@@ -113,10 +114,6 @@ export async function executeWorkflow(steps: Step[]) {
         if (!successFlag) break;
 
     }
-    // return {
-    //     status: "Success",
-    //     events
-    // }
     broadcast({
         type: "Workflow Complete",
         startTime: new Date().toLocaleTimeString()
